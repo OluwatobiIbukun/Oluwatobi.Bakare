@@ -155,7 +155,7 @@
 					<footer id="footer">
 						<section>
 							<p><b>DROP ME A MESSAGE</b></p>
-							<form method="post" name="contactForm">								
+							<form name="contactForm">								
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name:</label>
@@ -218,46 +218,9 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-			<!-- Form Submission with Google Sheet -->
-			<!-- <script>
-				document.getElementById('contactForm').addEventListener('submit', submitForm);
-			
-				function submitForm(event) {
-				  event.preventDefault();
-			
-				  const formData = new FormData(event.target);
-				  const name = formData.get('name');
-				  const email = formData.get('email');
-				  const message = formData.get('message');
-			
-				  const data = {
-					values: [ [name, email, message] ]
-				  };
-			
-				  fetch('https://sheets.googleapis.com/v4/spreadsheets/1DLmHkHLbr-XQnIizQgbu9198TeMA_Bf6JyfZrPt7uzE/values/Sheet1!A1:C1:append?valueInputOption=USER_ENTERED', {
-					method: 'POST',
-					headers: {
-					  'Authorization': 'Bearer {YOUR_ACCESS_TOKEN}',
-					  'Content-Type': 'application/json',
-					},
-					body: JSON.stringify(data),
-				  })
-				  .then(response => {
-					if (!response.ok) {
-					  throw new Error('Network response was not ok');
-					}
-					alert('Form submitted successfully');
-					document.getElementById('contactForm').reset();
-				  })
-				  .catch(error => {
-					console.error('Error:', error);
-					alert('There was a problem submitting your form. Please try again later.');
-				  });
-				}
-			</script> -->
-
+			<!-- Form Submission with Google Sheet -->			
 			<script>
-				const scriptURL = 'https://script.google.com/macros/s/AKfycbwXJmaNb_jwclSMIKVjA1qDT04Tm9ZUtpePg4Pyl0wDM7nbL-Q4V7JtVolJOczmW-f50A/exec'
+				const scriptURL = 'https://script.google.com/macros/s/AKfycbwIHxMjQRgtXYVukz_4mhyl3OTF9CLKuBBphb7S5dkLjGr98lGGOygH3-JjbGsWvILOIQ/exec'
 				const form = document.forms['contactForm']
 				const msg = document.getElementById("msg")
 
